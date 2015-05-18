@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app>
+<head>
+
+    <script src="js/angular.min.js"></script>
+</head>
+
+
+
+
+<body>
+<div ng-controller="testCtrl">
+    <label>Name:</label>
+    <input type="text" ng-model="yourName" placeholder="Enter a name here">
+    <hr>
+    <h1>Hello {{yourName}}!</h1>
+    <button ng-click="clearInputValue()">clear</button>
+
+    ------------------------
+    <label>name2</label>
+    <input type="text" ng-model="myname" placeholder="Enter name"/>
+    <h0>hi {{myname}}</h0>
+</div>
+
+<script>
+    function testCtrl($scope){
+        $scope.yourName = "world";
+        $scope.clearInputValue=function(){
+            $scope.yourName="";
+        }
+    }
+
+</script>
+</body>
+</html>
